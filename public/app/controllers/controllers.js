@@ -1,3 +1,13 @@
-/**
- * Created by irina.samsonova on 16.02.2016.
+/*
+ * Main controllers file
  */
+
+angular.module("app.controllers", []).
+    controller("AdminAppCtrl", ["$scope", "$location",
+        function($scope, $location){
+
+            $scope.checkIfShow = function(){
+                return false;
+            };
+
+        }]);

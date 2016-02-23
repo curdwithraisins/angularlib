@@ -9,13 +9,22 @@
     <title>Angular Lib App</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width? initial-scale=1">
+
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/style.css">
-    <script rel="bower_components/jquery/dist/jquery.min.js"></script>
 </head>
-<body>
+<body ng-app="libApp" ng-controller="AdminAppCtrl">
+
+<!--header-->
+<div data-ng-hide="checkIfShow()" data-ng-cloak="" class="">
+    <section data-ng-include=" 'app/views/header.html' " id="header"></section>
+</div>
+
+
+<!--Libraries-->
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="bower_components/slimScroll/jquery.slimscroll.min.js"></script>
 <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
@@ -27,10 +36,11 @@
 <script type="text/javascript" src="bower_components/angular-media-player/dist/angular-media-player.min.js"></script>
 <script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
 <script type="text/javascript" src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+<!--<script type="text/javascript" src="bower_components/queryloader2/queryloader2.min.js"></script>-->
 <script type="text/javascript" src="app/app.js"></script>
 <script type="text/javascript" src="app/config.js"></script>
 <script type="text/javascript" src="app/controllers/controllers.js"></script>
 <script type="text/javascript" src="app/directives/directives.js"></script>
-<script type="text/javascript" src="app/servises/services.js"></script>
+<script type="text/javascript" src="app/servises/servises.js"></script>
 </body>
 </html>
