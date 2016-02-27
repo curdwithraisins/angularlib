@@ -1,0 +1,13 @@
+.navbar-class {
+
+  .header-margin {
+
+    @media screen and (max-width: $small-screen) {
+      margin: 0;
+    }
+
+    .navbar-toggle {
+      padding: 5px 10px;
+    }
+  }
+}

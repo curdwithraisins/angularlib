@@ -2,10 +2,12 @@
  * LibAppModule
  */
 
-var app = angular.module("libApp", ["ngRoute", "ngAnimate", "app.controllers"]);
-
-app.run(["$rootScope", "$location",
+angular.module("libApp", ["ngRoute", "ngAnimate", "app.controllers"]).
+    run(["$rootScope", "$location",
     function($rootScope, $location) {
+        console.log(1);
+
+
         /*$(document).ready(function () {
             $("body").queryLoader2({
                 backgroundColor: "#fff",
