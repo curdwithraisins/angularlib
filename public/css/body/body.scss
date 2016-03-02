@@ -1,4 +1,15 @@
 body {
   padding: 0 5%;
   transition: all 0.7s ease 0s;
+
+  .view-container {
+    top: 100px;
+    position: relative;
+  }
+
+  .content {
+    float: right;
+    background-color: #b92c28;
+    height: 3000px;
+  }
 }

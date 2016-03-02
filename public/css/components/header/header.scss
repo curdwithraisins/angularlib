@@ -1,3 +1,5 @@
+$night-style: false !default;
+
 .navbar-class {
   border-bottom-color: $gray-lighter;
   margin: 0 5%;
@@ -6,7 +8,8 @@
     margin: 15px 0;
 
     span.fa {
-      font-size: 17px;
+      font-size: 15px;
+      color: $gray-light;
     }
 
     button {
@@ -32,57 +35,28 @@
     }
 
     .navbar-form {
+      width: 50%;
+      max-width: 500px;
       box-shadow: none;
 
-      .form-control {
-        background-color: inherit !important;
-        border-color: $gray-lighter;
-        border-right-color: transparent;
-        box-shadow: none;
+      .input-group {
+        width: 100%;
+
+        .form-control {
+          background-color: inherit !important;
+          border-color: $gray-lighter;
+          border-right-color: transparent;
+          box-shadow: none;
+        }
       }
 
-      .btn-search {
-        border-left-color: transparent;
+      .input-group-btn {
+        width: 38px;
+
+        .btn-search {
+          border-left-color: transparent;
+        }
       }
-    }
-
-    .dropdown-toggle {
-      background-color: transparent;
-      padding-top: 10px;
-      padding-bottom: 10px;
-
-      .img-circle {
-        width: 2em;
-      }
-    }
-
-    .dropdown-menu {
-      &:before, &:after {
-        content: "";
-        width: 0;
-        height: 0;
-        border: 0.5em solid transparent;
-        border-top: 0;
-        position: absolute;
-        right: 1.2em;
-        top: -0.5em;
-      }
-
-      &:before {
-        border-bottom-color: $gray-light;
-      }
-
-      &:after {
-        border-bottom-color: #fff;
-      }
-    }
-  }
-
-  @media screen and (min-width: $small-screen) {
-    .vcenter {
-      display: inline-block;
-      vertical-align: middle;
-      float: none;
     }
   }
 }

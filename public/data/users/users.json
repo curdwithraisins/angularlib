@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "path": "josh-black",
+    "name": "Josh Black",
+    "password": "cat"
+  },
+  {
+    "id": "2",
+    "path": "karen-gilmor",
+    "name": "Karen Gilmor",
+    "password": "dog"
+  }
+]

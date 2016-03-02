@@ -1,3 +1,36 @@
 .night {
+  $night-style: true;
   background-color: $gray-darker;
+
+  .navbar-class {
+    @if ($night-style) {
+      border-bottom-color: $gray-dark;
+
+      .header-margin {
+        .navbar-btn {
+          border-color: $night-btn;
+          span {
+            color: $night-btn;
+          }
+        }
+
+        button {
+          &:hover {
+            background-color: $gray;
+          }
+        }
+
+        .navbar-form {
+          .form-control {
+            border-color: $gray-dark;
+            border-right-color: transparent;
+          }
+          .btn-search {
+            border-color: $gray-dark;
+            border-left-color: transparent;
+          }
+        }
+      }
+    }
+  }
 }

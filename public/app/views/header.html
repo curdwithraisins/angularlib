@@ -28,27 +28,35 @@
                     <li class="dropdown vcenter">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-haspopup="true" aria-expanded="false">
-                            <img src="img/user.png" alt="..." class="img-circle">
+                            <span class="fa fa-bell-o"></span>
+                            <span class="badge">14</span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Settings</a></li>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Log Out</a></li>
+                        <ul class="dropdown-menu list-group">
+                            <li><a href="#">
+                                <span class="fa fa-envelope-o"></span>
+                                Jane set message
+                                <h6>3 hours ago</h6></a>
+                            </li>
+                            <li><a href="#">
+                                <span class="fa fa-comment-o"></span>
+                                Jane left comment
+                                <h6>3 hours ago</h6></a>
+                            </li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Your Profile</a></li>
+                            <li><a href="#">See all notifications.</a></li>
                         </ul>
                     </li>
                     <li class="dropdown vcenter">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-haspopup="true" aria-expanded="false">
-                            <span class="fa fa-bell-o"></span>
+                            <img ng-src="{{mainImg}}" alt="..." class="img-circle">
                         </a>
                         <ul class="dropdown-menu">
+                            <li><a href="#">Profile</a></li>
                             <li><a href="#">Settings</a></li>
                             <li><a href="#">Help</a></li>
-                            <li><a href="#">Log Out</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Your Profile</a></li>
+                            <li><a href="#">Log Out</a></li>
                         </ul>
                     </li>
                 </ul>

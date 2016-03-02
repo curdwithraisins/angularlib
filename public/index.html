@@ -18,8 +18,14 @@
 <body ng-app="libApp" ng-controller="AdminAppCtrl" ng-class="{night: nightStyle}">
 
 <!--header-->
-<div data-ng-hide="checkIfShow()" data-ng-cloak="" class="">
+<div data-ng-hide="checkIfShow()" data-ng-cloak="" class="row">
     <section data-ng-include=" 'app/views/header.html' " id="header"></section>
+</div>
+<div class="row view-container">
+    <div data-ng-hide="checkIfShow()" data-ng-cloak="" class="col-xs-4 col-sm-3 col-md-3 col-lg-2" style="background-color: #456">
+        <section data-ng-include=" 'app/views/sidebar.html' " id="side-bar"></section>
+    </div>
+    <div id="content" class="content col-xs-12 col-sm-9 col-md-9 col-lg-10"></div>
 </div>
 
 
@@ -29,6 +35,7 @@
 <script type="text/javascript" src="bower_components/slimScroll/jquery.slimscroll.min.js"></script>
 <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-resource/angular-resource.min.js"></script>
 <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
 <script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
 <script type="text/javascript" src="bower_components/angular-ui-tree/dist/angular-ui-tree.js"></script>
