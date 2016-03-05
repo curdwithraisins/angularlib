@@ -10,22 +10,22 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width? initial-scale=1">
 
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body ng-app="libApp" ng-controller="AdminAppCtrl" ng-class="{night: nightStyle}">
 
 <!--header-->
-<div data-ng-hide="checkIfShow()" data-ng-cloak="" class="row">
+<div data-ng-if="checkIfShow()" data-ng-cloak="" class="row">
     <section data-ng-include=" 'app/views/header.html' " id="header"></section>
 </div>
-<div class="row view-container">
-    <div data-ng-hide="checkIfShow()" data-ng-cloak="" class="col-xs-4 col-sm-3 col-md-3 col-lg-2" style="background-color: #456">
+<div class="row" ng-class="{'view-container': showNav}">
+    <div data-ng-if="checkIfShow()" data-ng-cloak="" class="col-xs-4 col-sm-3 col-md-3 col-lg-2 affix">
         <section data-ng-include=" 'app/views/sidebar.html' " id="side-bar"></section>
     </div>
-    <div id="content" class="content col-xs-12 col-sm-9 col-md-9 col-lg-10"></div>
+    <div data-ng-view="" ng-class="{'content col-xs-12 col-sm-9 col-md-9 col-lg-10': showNav}" id="content"></div>
 </div>
 
 

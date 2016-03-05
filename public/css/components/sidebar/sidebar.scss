@@ -1,0 +1,16 @@
+.sidebar {
+  ul {
+    li {
+      a {
+        &:hover {
+          background-color: $sidebar;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+.current-read {
+  
+}

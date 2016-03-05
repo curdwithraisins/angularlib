@@ -16,11 +16,15 @@
 
     .open {
       a {
-        background-color: transparent;
+        position: relative;
+        display: block;
+        padding: 10px 15px;
       }
     }
 
     .dropdown-menu {
+      min-width: 200px;
+
       li {
         h6 {
           margin-top: 5px;

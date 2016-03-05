@@ -24,5 +24,32 @@ angular.module("libApp", ["ngRoute", "ngAnimate", "app.controllers", "app.servic
          });
 
          });*/
-    }
-]);
+    }])
+    .config(["$routeProvider", function($routeProvider){
+        return $routeProvider
+            .when("/", {
+                redirectTo: "/dashboard"
+            })
+            .when("/dashboard", {
+                templateUrl: "app/views/dashboard/dashboard.html",
+                controller: "dashboardCtrl"
+            })
+            .when("/recomendations", {
+                templateUrl: "app/views/pages/recomendations.html"
+            })
+            .when("/feautures", {
+                templateUrl: "app/views/pages/feautures.html"
+            })
+            .when("/collections", {
+                templateUrl: "app/views/pages/collections.html"
+            })
+            .when("/404", {
+                templateUrl: "app/views/pages/404.html"
+            })
+            .when("/500", {
+                templateUrl: "app/views/pages/500.html"
+            })
+            .otherwise({
+                redirectTo: "/404"
+            });
+    }]);

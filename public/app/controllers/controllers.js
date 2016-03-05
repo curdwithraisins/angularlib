@@ -3,10 +3,11 @@
  */
 
 angular.module("app.controllers", [])
-    .controller("AdminAppCtrl", ["$scope", "$location", "GetUserData",
-        function($scope, $location, GetUserData){
+    .controller("AdminAppCtrl", ["$scope", "$location", "$routeParams", "GetUserData",
+        function($scope, $location, $routeParams, GetUserData){
             $scope.isLogIn = false;
             $scope.currentUser = null;
+            $scope.showNav = true;
 
             $scope.exitApp = function(){
                 $scope.isLogIn = false;
@@ -15,13 +16,14 @@ angular.module("app.controllers", [])
 
             $scope.setCurrentUser = function(path){
                 $scope.isLogIn = true;
+                console.log($routeParams);
                 $scope.currentUser = GetUserData.get({path: path}, function(user){
                     $scope.mainImg = user.image;
                 });
             };
 
             $scope.checkIfShow = function(){
-                return false;
+                return $scope.showNav = !_.contains(["/404", "/500", "/login", "/front"], $location.path());
             };
 
             $scope.$on('styleChang', function(e, data){
@@ -30,10 +32,23 @@ angular.module("app.controllers", [])
 
         }])
     .controller("headerCtrl", ["$scope", function($scope){
-        $scope.$watch('nightStyle', function(newStyle){
+        return $scope.$watch('nightStyle', function(newStyle){
             if (newStyle !== undefined)
                 $scope.$emit('styleChang', newStyle);
         });
-    }]).controller("asideBar", ["$scope", function($scope){
+    }])
+    .controller("asideBar", ["$scope", function($scope){
+        $scope.bookmark = [
+            {
+                name: "Alice in Wonderland",
+                author: "Luis Carroll"
+            },
+
+            {
+                name: "A Dance with Dragon",
+                author: "George R.R. Martin"
+            }];
+    }])
+    .controller("dashboardCtrl", ["$scope", "$rootScope", function($scope, $rootScope){
 
     }]);

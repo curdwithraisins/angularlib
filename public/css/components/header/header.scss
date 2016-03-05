@@ -1,60 +1,65 @@
 $night-style: false !default;
+header {
+  .navbar {
+    transition: all 0.7s ease 0s;
+    background-color: #fff;
+  }
+  .navbar-header {
+    border-bottom-color: $gray-lighter;
+    margin: 0 3%;
 
-.navbar-class {
-  border-bottom-color: $gray-lighter;
-  margin: 0 5%;
+    .header-margin {
+      margin: 15px 0;
 
-  .header-margin {
-    margin: 15px 0;
-
-    span.fa {
-      font-size: 15px;
-      color: $gray-light;
-    }
-
-    button {
-      border-color: $gray-lighter;
-      background-color: inherit;
-      color: $gray-light;
-
-      &:active, &:focus {
-        outline: none !important;
+      span.fa {
+        font-size: 15px;
+        color: $gray-light;
       }
 
-      &:hover {
-        background-color: $gray-lighter;
-      }
-    }
+      button {
+        border-color: $gray-lighter;
+        background-color: inherit;
+        color: $gray-light;
 
-    .navbar-header {
-      border-bottom-color: $gray-lighter;
-    }
+        &:active, &:focus {
+          outline: none !important;
+        }
 
-    .collapse-btn {
-      font-size: 17px;
-    }
-
-    .navbar-form {
-      width: 50%;
-      max-width: 500px;
-      box-shadow: none;
-
-      .input-group {
-        width: 100%;
-
-        .form-control {
-          background-color: inherit !important;
-          border-color: $gray-lighter;
-          border-right-color: transparent;
-          box-shadow: none;
+        &:hover {
+          background-color: $gray-lighter;
         }
       }
 
-      .input-group-btn {
-        width: 38px;
+      .navbar-header {
+        border-bottom-color: $gray-lighter;
+      }
 
-        .btn-search {
-          border-left-color: transparent;
+      .collapse-btn {
+        font-size: 17px;
+      }
+
+      .navbar-form {
+        width: 50%;
+        max-width: 500px;
+        box-shadow: none;
+
+        .input-group {
+          width: 100%;
+
+          .form-control {
+            background-color: inherit !important;
+            border-color: $gray-lighter;
+            border-right-color: transparent;
+            box-shadow: none;
+          }
+        }
+
+        .input-group-btn {
+          width: 38px;
+
+          .btn-search {
+            border-left-color: transparent;
+          }
         }
       }
     }

@@ -2,7 +2,7 @@ $small-screen: 768px;
 $middle-screen: 992px;
 
 @import "color/color";
-@import "body/body";
+@import "components/body/body";
 @import "components/header/header";
 @import "components/header/min-header";
 @import "components/header/dropdown";

@@ -1,12 +1,32 @@
 <!--SideBar Template-->
 <aside ng-controller="asideBar">
-    <nav class="sidebar affix">
+    <nav class="sidebar">
         <ul class="nav nav-sidebar">
-            <li><a href="#">1</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">1</a></li>
+            <li><a href="#/dashboard">New Release</a></li>
+            <li><a href="#/recomendations">Recomendations</a></li>
+            <li><a href="#/feautures">Feautures</a></li>
+            <li><a href="#/collections">My Books</a></li>
         </ul>
     </nav>
+    <div class="book-mark">
+        <ul class="nav nav-sidebar">
+            <li class="nav-sidebar-header">Book Marks</li>
+            <li><a href="#">{{bookmark[0].name}} by {{bookmark[0].author}}</a></li>
+            <li><a href="#">{{bookmark[1].name}} by {{bookmark[1].author}}</a></li>
+            <li><a href="#">
+                <ng-pluralize count="bookmark.length-2"
+                        when="{'0': '',
+                                'other': 'and {} another.'}">
+                </ng-pluralize></a></li>
+        </ul>
+    </div>
+    <div class="current-read">
+        <ul class="nav nav-sidebar">
+            <li class="nav-sidebar-header">Currently Reading</li>
+            <li><a href="#">New Release</a></li>
+            <li><a href="#">Recomendation</a></li>
+            <li><a href="#">Feautures</a></li>
+            <li><a href="#">My Books</a></li>
+        </ul>
+    </div>
 </aside>

@@ -1,7 +1,11 @@
 .night {
   $night-style: true;
   background-color: $gray-darker;
-
+  .navbar {
+    @if ($night-style) {
+      background-color: $gray-darker;
+    }
+  }
   .navbar-class {
     @if ($night-style) {
       border-bottom-color: $gray-dark;
@@ -21,13 +25,29 @@
         }
 
         .navbar-form {
-          .form-control {
-            border-color: $gray-dark;
-            border-right-color: transparent;
+          .input-group {
+            .form-control {
+              border-color: $gray-dark;
+              border-right-color: transparent;
+            }
           }
           .btn-search {
             border-color: $gray-dark;
             border-left-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    ul {
+      li {
+        a {
+          &:hover {
+            @if ($night-style) {
+              background-color: $night-btn;
+            }
           }
         }
       }
