@@ -1,7 +1,7 @@
 /*
 * Main services file
 * */
-
+"use strict";
 angular.module("app.services", ["ngResource"])
     .service('Session', function() {
         this.create = function (userId) {
@@ -12,8 +12,8 @@ angular.module("app.services", ["ngResource"])
             this.userId = null;
         };
     })
-    .factory("LogInApp", ["$http", "$resource", "$q", "Session",
-        function($http, $resource, $q, Session){
+    .factory("LogInApp", ["$http", "$q", "Session", "$resource",
+        function($http, $q, Session, $resource){
         var LogIn = {};
 
         LogIn.login = function(credentials) {

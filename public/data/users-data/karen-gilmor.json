@@ -1,4 +1,25 @@
 {
   "name": "Karen Gilmor",
-  "image": "img/user2.png"
+  "image": "img/user2.png",
+  "notifications": [
+    {
+      "name": "Jane",
+      "type": "comment",
+      "time": "2016-03-07T18:41:49.695Z"
+    }
+  ],
+  "bookmarks": [
+    {
+      "name": "Alice in Wonderland",
+      "author": "Luis Carroll"
+    },
+    {
+      "name": "A Dance with Dragon",
+      "author": "George R.R. Martin"
+    },
+    {
+      "name": "Harry Potter",
+      "author": "J.K. Rowling"
+    }
+  ]
 }

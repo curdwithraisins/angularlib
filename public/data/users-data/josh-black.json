@@ -1,4 +1,31 @@
 {
   "name": "Josh Black",
-  "image": "img/user1.png"
+  "image": "img/user1.png",
+  "notifications": [
+    {
+      "name": "Jane",
+      "type": "comment",
+      "time": "2016-03-07T18:41:49.695Z"
+    },
+    {
+      "name": "Lily",
+      "type": "message",
+      "time": "2016-01-07T08:21:33.695Z"
+    },
+    {
+      "name": "Kate",
+      "type": "comment",
+      "time": "2016-03-07T17:42:19.695Z"
+    }
+  ],
+  "bookmarks": [
+    {
+      "name": "Alice in Wonderland",
+      "author": "Luis Carroll"
+    },
+    {
+      "name": "A Dance with Dragon",
+      "author": "George R.R. Martin"
+    }
+  ]
 }

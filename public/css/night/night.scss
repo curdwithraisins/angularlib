@@ -1,11 +1,13 @@
 .night {
   $night-style: true;
   background-color: $gray-darker;
+
   .navbar {
     @if ($night-style) {
       background-color: $gray-darker;
     }
   }
+
   .navbar-class {
     @if ($night-style) {
       border-bottom-color: $gray-dark;
@@ -41,14 +43,10 @@
   }
 
   .sidebar {
-    ul {
-      li {
-        a {
-          &:hover {
-            @if ($night-style) {
-              background-color: $night-btn;
-            }
-          }
+    a {
+      &:hover {
+        @if ($night-style) {
+          background-color: $night-btn;
         }
       }
     }

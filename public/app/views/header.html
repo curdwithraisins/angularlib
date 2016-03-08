@@ -3,33 +3,16 @@
     <nav class="navbar navbar-class navbar-fixed-top navbar-header"> <!--navbar-default">-->
         <div class="container-fluid header-margin">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#/dashboard">Brand</a>
-                <button type="button" class="navbar-toggle collapsed collapse-btn"
-                        data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
-                    <span class="fa fa-bars"></span>
-                </button>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="navbar">
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-search" type="button">...</button>
-                        </span>
-                    </div><!-- /input-group -->
-                </form>
-                <button type="button" class="btn navbar-btn" ng-click="nightStyle = !nightStyle">
-                    <span class="fa fa-moon-o"></span>
-                </button>
+            <div class="navbar-icon">
+                <a class="navbar-brand" href="#/dashboard">
+                    <img id="icon" ng-class="{'icon': !nightStyle, 'icon-night': nightStyle}"/>
+                </a>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown vcenter">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-haspopup="true" aria-expanded="false">
                             <span class="fa fa-bell-o"></span>
-                            <span class="badge">14</span>
+                            <span class="badge">{{notifications.length}}</span>
                         </a>
                         <ul class="dropdown-menu list-group">
                             <li><a href="#">
@@ -52,6 +35,8 @@
                             <img ng-src="{{mainImg}}" alt="..." class="img-circle">
                         </a>
                         <ul class="dropdown-menu">
+                            <li class="signin">Signed in as {{currentUser}}</li>
+                            <li role="separator" class="divider"></li>
                             <li><a href="#">Profile</a></li>
                             <li><a href="#">Settings</a></li>
                             <li><a href="#">Help</a></li>
@@ -60,6 +45,25 @@
                         </ul>
                     </li>
                 </ul>
+                <button type="button" class="navbar-toggle collapsed collapse-btn"
+                        data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="fa fa-bars"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-search" type="button">...</button>
+                        </span>
+                    </div><!-- /input-group -->
+                </form>
+                <button type="button" class="btn navbar-btn" ng-click="nightStyle = !nightStyle">
+                    <span class="fa fa-moon-o"></span>
+                </button>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>

@@ -1,7 +1,7 @@
 /*
  * LibAppModule
  */
-
+"use strict";
 angular.module("libApp", ["ngRoute", "ngAnimate", "app.controllers", "app.services"])
     .run(["$rootScope", "$location", "LogInApp", function($rootScope, $location, LogInApp) {
         /*LogInApp.cookie().$promise.then(function(data) {

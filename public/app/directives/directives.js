@@ -1,3 +1,4 @@
-/**
- * Created by irina.samsonova on 16.02.2016.
+/*
+ *Main directives file
  */
+"use strict";

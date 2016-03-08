@@ -1,5 +1,8 @@
 $night-style: false !default;
+
 header {
+  color: $gray-light;
+
   .navbar {
     transition: all 0.7s ease 0s;
     background-color: #fff;
@@ -10,6 +13,7 @@ header {
 
     .header-margin {
       margin: 15px 0;
+      width: 100%;
 
       span.fa {
         font-size: 15px;
@@ -30,12 +34,40 @@ header {
         }
       }
 
-      .navbar-header {
+      .navbar-icon {
         border-bottom-color: $gray-lighter;
+
+        .navbar-brand {
+          padding: 0;
+          margin-top: 10px;
+          height: auto;
+
+          #icon {
+            margin-right: 10px;
+            width: 80px;
+            height: 30px;
+            display: inline-block;
+            vertical-align: middle;
+            background-size: 80px;
+            transition: all 0.7s ease 0s;
+          }
+
+          .icon {
+            background: url(../../../img/icon.png) no-repeat;
+          }
+
+          .icon-night {
+            background: url(../../../img/icon-night.png) no-repeat;
+          }
+        }
       }
 
       .collapse-btn {
         font-size: 17px;
+      }
+
+      .navbar-collapse {
+        width: 100%;
       }
 
       .navbar-form {

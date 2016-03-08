@@ -11,11 +11,13 @@
     <div class="book-mark">
         <ul class="nav nav-sidebar">
             <li class="nav-sidebar-header">Book Marks</li>
-            <li><a href="#">{{bookmark[0].name}} by {{bookmark[0].author}}</a></li>
-            <li><a href="#">{{bookmark[1].name}} by {{bookmark[1].author}}</a></li>
+            <li><a href="#">{{bookmarks[0].name}} by {{bookmarks[0].author}}</a></li>
+            <li><a href="#">{{bookmarks[1].name}} by {{bookmarks[1].author}}</a></li>
             <li><a href="#">
-                <ng-pluralize count="bookmark.length-2"
+                <ng-pluralize count="bookmark.length"
                         when="{'0': '',
+                                '1': '',
+                                '2': '',
                                 'other': 'and {} another.'}">
                 </ng-pluralize></a></li>
         </ul>

@@ -23,12 +23,25 @@
     }
 
     .dropdown-menu {
-      min-width: 200px;
+      min-width: 180px;
+
+      .signin {
+        padding: 5px 10px;
+      }
 
       li {
         h6 {
           margin-top: 5px;
           margin-bottom: 0;
+        }
+
+        a {
+          padding: 5px 10px;
+
+          &:hover {
+            background-image: none;
+            background-color: $gray-lighter;
+          }
         }
       }
 
@@ -57,17 +70,16 @@
         display: inline-block;
         vertical-align: middle;
         float: none;
-
-        .badge {
-          position: absolute;
-          background-color: #f05753;
-          top: -2px;
-          right: 0px;
-          font-size: 10px;
-          border: 1px solid inherit;
-          padding: 3px 5px;
-        }
       }
+    }
+    .badge {
+      position: absolute;
+      background-color: #f05753;
+      top: -2px;
+      right: 5px;
+      font-size: 10px;
+      border: 1px solid inherit;
+      padding: 3px 5px;
     }
   }
 }

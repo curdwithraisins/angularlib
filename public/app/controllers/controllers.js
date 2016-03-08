@@ -1,7 +1,7 @@
 /*
  * Main controllers file
  */
-
+"use strict";
 angular.module("app.controllers", [])
     .controller("AdminAppCtrl", ["$scope", "$location", "$routeParams", "GetUserData",
         function($scope, $location, $routeParams, GetUserData){
@@ -16,9 +16,11 @@ angular.module("app.controllers", [])
 
             $scope.setCurrentUser = function(path){
                 $scope.isLogIn = true;
-                console.log($routeParams);
-                $scope.currentUser = GetUserData.get({path: path}, function(user){
+                GetUserData.get({path: path}, function(user){
                     $scope.mainImg = user.image;
+                    $scope.bookmarks = user.bookmarks;
+                    $scope.notifications = user.notifications;
+                    $scope.currentUser = user.name;
                 });
             };
 
@@ -38,16 +40,7 @@ angular.module("app.controllers", [])
         });
     }])
     .controller("asideBar", ["$scope", function($scope){
-        $scope.bookmark = [
-            {
-                name: "Alice in Wonderland",
-                author: "Luis Carroll"
-            },
 
-            {
-                name: "A Dance with Dragon",
-                author: "George R.R. Martin"
-            }];
     }])
     .controller("dashboardCtrl", ["$scope", "$rootScope", function($scope, $rootScope){
 
